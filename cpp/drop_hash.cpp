@@ -156,12 +156,7 @@ Opt std_name(const Opt& v) {
   if (!v) return std::nullopt;
   std::string o;
   for (char32_t c : decode(*v)) {
-    if (c >= 0xac00 && c <= 0xd7a3) {  // Hangul syllable: canonical decomposition, as NFD does
-      char32_t s = c - 0xac00;
-      put(o, 0x1100 + s / 588);
-      put(o, 0x1161 + (s % 588) / 28);
-      if (s % 28) put(o, 0x11a7 + s % 28);
-    } else if (in_ranges(NAME_DROP, c)) {
+    if (in_ranges(NAME_DROP, c)) {
     } else if (const char* m = find_map(NAME_MAP, c)) {
       o += m;
     } else {

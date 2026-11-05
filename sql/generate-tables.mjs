@@ -10,7 +10,7 @@ let o = `-- SPDX-License-Identifier: Apache-2.0
 -- drop_name_char: per-character name standardization. One row for every assigned, non-private-use, non-ASCII code
 --   point whose result under the name rule (lowercase, DROP map, accent fold, keep letters/digits) is not itself;
 --   rep '' means the character is dropped. Generated with Unicode ${process.versions.unicode} (the Node.js build used).
---   Characters with no row are kept unchanged (correct for CJK, Arabic, Hebrew letters).
+--   Characters with no row are kept unchanged (CJK, Arabic and Hebrew letters are left unchanged by the spec).
 CREATE TABLE IF NOT EXISTS drop_translit (ch TEXT PRIMARY KEY, rep TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS drop_name_char (ch TEXT PRIMARY KEY, rep TEXT NOT NULL);
 DELETE FROM drop_translit; DELETE FROM drop_name_char;
@@ -19,9 +19,8 @@ const tr = Object.entries(H.TRANSLIT);
 o += 'INSERT INTO drop_translit (ch, rep) VALUES\n' + tr.map(([k, v]) => `(${q(k)},${q(v)})`).join(',\n') + ';\n';
 const rows = [];
 // Every assigned, non-private-use code point above ASCII whose single-character name result differs from itself.
-// Hangul syllables (U+AC00..U+D7A3) are decomposed arithmetically in drop_hash_sqlite.sql instead (11,172 rows saved).
 for (let cp = 0x80; cp <= 0x10ffff; cp++) {
-  if ((cp >= 0xd800 && cp <= 0xdfff) || (cp >= 0xac00 && cp <= 0xd7a3)) continue;
+  if (cp >= 0xd800 && cp <= 0xdfff) continue;
   const c = String.fromCodePoint(cp);
   if (/[\p{Cn}\p{Co}]/u.test(c)) continue;
   const r = H.stdName(c) ?? '';

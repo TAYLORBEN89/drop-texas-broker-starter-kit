@@ -19,8 +19,8 @@ auto h = drop::hash_for("ndz", r);  // "HkOYp2z1hmlSBntwMGHYOxSjLSxaUxKoPMnTzvGa
 
 How it matches JS exactly: the name rule, the letter/number class, full Unicode lowercasing and the cased /
 case-ignorable sets (for the Greek final-sigma rule) come from tables generated from the JS reference
-(`drop_tables.inc`, Unicode version recorded in its header). Hangul syllables are decomposed arithmetically, as NFD
-does. ZIP truncation counts UTF-16 code units like JavaScript's `slice`, and a lone surrogate is hashed as U+FFFD like
+(`drop_tables.inc`, Unicode version recorded in its header). Chinese, Japanese, Korean, Arabic and Hebrew letters
+have no table entry, so they pass through unchanged. ZIP truncation counts UTF-16 code units like JavaScript's `slice`, and a lone surrogate is hashed as U+FFFD like
 `TextEncoder`.
 
 Limits: input must be UTF-8 (invalid bytes become U+FFFD). Characters newer than the table's Unicode version are

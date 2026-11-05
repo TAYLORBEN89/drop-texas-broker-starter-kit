@@ -5,9 +5,17 @@
 Produces byte-identical output to js/drop-hash.mjs. See ../SPEC.md for the rules.
 """
 import base64
+import bisect
 import hashlib
 import re
 import unicodedata
+
+try:
+    from ._unchanged_ranges import UNCHANGED_RANGES
+except ImportError:
+    from _unchanged_ranges import UNCHANGED_RANGES
+
+_UNCHANGED_STARTS = [a for a, _ in UNCHANGED_RANGES]
 
 STATUS = {2: "exempt", 3: "deleted", 4: "opted_out", 5: "not_found"}
 LIST_TYPES = ("email", "phone", "ndz")
@@ -43,12 +51,24 @@ def _is_letter_or_digit(c):
     return cat[0] == "L" or cat[0] == "N"
 
 
+def _unchanged(c):
+    """True for Chinese, Japanese, Korean, Arabic and Hebrew characters (left unchanged per the CPPA DROP spec)."""
+    cp = ord(c)
+    i = bisect.bisect_right(_UNCHANGED_STARTS, cp) - 1
+    return i >= 0 and cp <= UNCHANGED_RANGES[i][1]
+
+
+def _fold(c):
+    return "".join(d for d in unicodedata.normalize("NFD", c) if not unicodedata.category(d).startswith("M"))
+
+
 def std_name(v):
-    """Lowercase, map, fold accents (NFD + drop combining marks), map again, keep letters and digits only."""
+    """Lowercase, map, fold accents (NFD + drop combining marks) except in the unchanged scripts, map again,
+    keep letters and digits only."""
     if v is None:
         return None
     s = _translit(str(v).lower())
-    s = "".join(c for c in unicodedata.normalize("NFD", s) if not unicodedata.category(c).startswith("M"))
+    s = "".join(c if _unchanged(c) else _fold(c) for c in s)
     s = "".join(c for c in _translit(s) if _is_letter_or_digit(c))
     return s or None
 

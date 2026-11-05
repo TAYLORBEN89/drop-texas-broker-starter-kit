@@ -5,7 +5,6 @@
 import fs from 'node:fs';
 import * as H from '../js/drop-hash.mjs';
 const MAX = 0x10ffff;
-const isHangul = (cp) => cp >= 0xac00 && cp <= 0xd7a3;
 const isSur = (cp) => cp >= 0xd800 && cp <= 0xdfff;
 const lit = (s) => '"' + [...Buffer.from(s, 'utf8')].map((b) => '\\x' + b.toString(16).padStart(2, '0')).join('') + '"';
 const lower = [], nameMap = [], nameDrop = [], ln = [], cased = [], ignorable = [];
@@ -18,7 +17,6 @@ for (let cp = 0; cp <= MAX; cp++) {
   if (/[\p{L}\p{N}]/u.test(c)) pushRange(ln, cp);
   if (/\p{Cased}/u.test(c)) pushRange(cased, cp);
   if (/\p{Case_Ignorable}/u.test(c)) pushRange(ignorable, cp);
-  if (isHangul(cp)) continue; // decomposed arithmetically in C++
   const n = H.stdName(c) ?? '';
   if (n === '') pushRange(nameDrop, cp);
   else if (n !== c) nameMap.push([cp, n]);

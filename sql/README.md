@@ -29,7 +29,8 @@ and apply it per character exactly as the SQLite view does, or standardize names
 ## Honest limits
 
 Pure SQL can't do Unicode normalization or character-class tests, so names use a **precomputed per-character table**
-(`drop_name_char`, ~15,000 rows) generated from the JS reference, plus arithmetic Hangul decomposition. That gives
+(`drop_name_char`, ~14,000 rows) generated from the JS reference; characters with no row (including Chinese,
+Japanese, Korean, Arabic and Hebrew letters) are kept unchanged. That gives
 identical output on all vectors and on the differential fuzz, with these exceptions, which the runner reports as
 "skipped" if a vector ever hits them:
 

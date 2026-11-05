@@ -40,9 +40,6 @@ WITH RECURSIVE
       CASE
         WHEN s.field IN ('first_name', 'last_name') THEN
           CASE WHEN unicode(ch.c) < 128 THEN (CASE WHEN lower(ch.c) GLOB '[a-z0-9]' THEN lower(ch.c) ELSE '' END)
-               WHEN unicode(ch.c) BETWEEN 44032 AND 55203 THEN  -- Hangul syllable: canonical decomposition (NFD)
-                 char(4352 + (unicode(ch.c) - 44032) / 588, 4449 + ((unicode(ch.c) - 44032) % 588) / 28)
-                 || CASE WHEN (unicode(ch.c) - 44032) % 28 > 0 THEN char(4519 + (unicode(ch.c) - 44032) % 28) ELSE '' END
                WHEN unicode(ch.c) BETWEEN 57344 AND 63743 OR unicode(ch.c) >= 983040 THEN ''  -- private use: dropped
                ELSE coalesce((SELECT n.rep FROM drop_name_char n WHERE n.ch = ch.c), ch.c) END
         WHEN s.field = 'zip' THEN (CASE WHEN lower(ch.c) GLOB '[a-z0-9]' THEN lower(ch.c) ELSE '' END)

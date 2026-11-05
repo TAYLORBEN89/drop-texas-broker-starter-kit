@@ -34,20 +34,20 @@ Applied in this order:
 1. Lowercase (full Unicode lowercase).
 2. Replace each character found in the transliteration table (2.6).
 3. Canonical decomposition (NFD), then delete every combining mark. This folds accents: `é`→`e`, `å`→`a`, `ñ`→`n`.
+   Skip this step for Chinese, Japanese, Korean, Arabic and Hebrew characters (Unicode scripts Han, Bopomofo,
+   Hiragana, Katakana, Hangul, Arabic, Hebrew); see below.
 4. Apply the transliteration table again (for base letters exposed by step 3).
 5. Delete every character that is not a letter or a number: spaces, hyphens, apostrophes, periods, symbols, emoji.
 6. Empty result → null.
 
-Compound names become one value (`Juan Pablo` → `juanpablo`). Chinese, Japanese, Arabic and Hebrew letters are left
-as they are.
+Compound names become one value (`Juan Pablo` → `juanpablo`).
 
-> **Known difference: Korean Hangul.** Step 3 uses standard Unicode NFD, which also decomposes every precomposed
-> Hangul syllable into its conjoining jamo (for example `한` U+D55C → U+1112 U+1161 U+11AB). The DROP Texas engine
-> hashes that decomposed form, and this kit reproduces it exactly (see the `한국` test vector). Earlier wording, and the
-> CPPA DROP "Working with the data" page, say Korean characters are left unchanged; the CPPA page does not mention any
-> Unicode normalization form. So for names containing Hangul, a hash computed by "leave Korean unchanged" (precomposed
-> syllables) will **not** match a DROP Texas list. Use the rule in this section, or the reference code, to match our
-> lists. This may change in a future version; any change will be announced and versioned.
+Chinese, Japanese, Korean, Arabic and Hebrew characters are left unchanged, as the CPPA DROP "Working with the data"
+page says ("Leave Chinese, Japanese, Korean, Arabic, and Hebrew characters unchanged."). They are not decomposed,
+accent-folded or transliterated: Hangul syllables stay precomposed (`한국` stays U+D55C U+AD6D), kana keep their
+voicing marks (`が` stays `が`), and compatibility ideographs and presentation forms are not normalized. Lowercasing
+does not affect them. Step 5 still removes spaces, punctuation and standalone combining marks (for example Arabic
+harakat or Hebrew niqqud). The CPPA page publishes no example in these scripts; the test vectors include synthetic ones.
 
 ### 2.2 Date of birth → `YYYYMMDD`
 

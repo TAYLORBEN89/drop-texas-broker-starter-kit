@@ -26,11 +26,19 @@ const SPECIAL_LATIN = {
 export const TRANSLIT = { ...GREEK, ...CYRILLIC, ...SPECIAL_LATIN };
 const translit = (s) => Array.from(s, (c) => (c in TRANSLIT ? TRANSLIT[c] : c)).join('');
 
-// Names: lowercase, map, fold accents (NFD + drop combining marks), map again, keep only letters and digits.
+// CPPA DROP spec: "Leave Chinese, Japanese, Korean, Arabic, and Hebrew characters unchanged." Characters in these
+// scripts are never decomposed or accent-folded (Hangul stays precomposed, kana keep voicing marks).
+export const UNCHANGED_SCRIPTS = ['Han', 'Bopomofo', 'Hiragana', 'Katakana', 'Hangul', 'Arabic', 'Hebrew'];
+const UNCHANGED = /[\p{Script=Han}\p{Script=Bopomofo}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}\p{Script=Arabic}\p{Script=Hebrew}]/u;
+const foldAccents = (s) =>
+  Array.from(s, (c) => (UNCHANGED.test(c) ? c : c.normalize('NFD').replace(/\p{M}/gu, ''))).join('');
+
+// Names: lowercase, map, fold accents (NFD + drop combining marks) except in the unchanged scripts, map again,
+// keep only letters and digits.
 export function stdName(v) {
   if (v == null) return null;
   let s = translit(String(v).toLowerCase());
-  s = translit(s.normalize('NFD').replace(/\p{M}/gu, '')).replace(/[^\p{L}\p{N}]/gu, '');
+  s = translit(foldAccents(s)).replace(/[^\p{L}\p{N}]/gu, '');
   return s || null;
 }
 

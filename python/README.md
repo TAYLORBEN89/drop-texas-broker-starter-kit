@@ -11,3 +11,7 @@ and digits are ASCII only, so results match the JS reference byte for byte. Unic
 
 ZIP truncation counts UTF-16 code units, as JavaScript does (see SPEC 2.3), so supplementary-plane characters
 produce the same result as the engine.
+
+Python's `unicodedata` has no Script property, so the code point ranges of the scripts the spec leaves unchanged
+(Chinese, Japanese, Korean, Arabic, Hebrew) are generated from the JS reference into `_unchanged_ranges.py`
+(`node python/generate-ranges.mjs`).

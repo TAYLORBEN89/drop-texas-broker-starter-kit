@@ -479,8 +479,8 @@
     {
       "field": "first_name",
       "input": "한국",
-      "standardized": "한국",
-      "hash": "GCKfyezBCvsWS/Gv8LLqKCATv88QRKBpvimBxruB6kM="
+      "standardized": "한국",
+      "hash": "HrfabVbYg8od0aiLcK1jWgsmqbdn1QDTFRLmTc2yt7s="
     },
     {
       "field": "last_name",
@@ -493,6 +493,36 @@
       "input": "Example😀",
       "standardized": "example",
       "hash": "UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
+    },
+    {
+      "field": "first_name",
+      "input": "がぎぐ",
+      "standardized": "がぎぐ",
+      "hash": "yLiJDBiIpKEMtAn9aoSKmhWh7fnu2vgkdzte79R+H50="
+    },
+    {
+      "field": "last_name",
+      "input": "パン",
+      "standardized": "パン",
+      "hash": "QzxoNxo9VYhrvaOm/yTLFkT2zALSs/KZgl/oC+wcmsI="
+    },
+    {
+      "field": "first_name",
+      "input": "豈",
+      "standardized": "豈",
+      "hash": "I9xitdKKtHBA1FK7U/a07w9J36uZd9XzVBAFGKQ48Z8="
+    },
+    {
+      "field": "last_name",
+      "input": "יִ",
+      "standardized": "יִ",
+      "hash": "7NNLstHriYvBL6TGJVMki7dP6aCULFRc6+lwbSqxUv0="
+    },
+    {
+      "field": "first_name",
+      "input": "Kim 김-민준",
+      "standardized": "kim김민준",
+      "hash": "ujlQWRIpfEIJMebzJWzRB8Jr0kJEljn5dT0HjODRLO8="
     },
     {
       "field": "zip",
