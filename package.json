@@ -1,6 +1,6 @@
 {
   "name": "drop-broker-starter-kit",
-  "version": "0.1.0-draft",
+  "version": "0.1.0",
   "private": true,
   "license": "Apache-2.0",
   "type": "module",
