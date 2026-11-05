@@ -1,0 +1,8 @@
+# SYNTHETIC - a fictional broker's own customer file. exempt=yes means all PI held is exempt (status 2).
+customer_id,first_name,last_name,dob,zip,phone,email,exempt
+CUST-0001,TESTY,EXAMPLE,1990-01-12,78701,512-555-0100,  Testy.Example@Example.COM ,no
+CUST-0002,Sample,Placeholder,02/01/1985,73301-0000,,sample.placeholder@example.com,yes
+CUST-0003,Fakey,Mc-Fakerson,1999-12-31,78702,15125550102,,no
+CUST-0004,Fakey,McFakerson,19991231,78702,,fakey.alt@example.com,no
+CUST-0005,Nikos,Dokimi,1980-03-03,77001,,,no
+CUST-0006,Unrelated,Person,2000-01-01,10001,212-555-0199,unrelated@example.com,no

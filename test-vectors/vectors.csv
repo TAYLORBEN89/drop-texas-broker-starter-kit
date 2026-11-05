@@ -1,0 +1,97 @@
+# SYNTHETIC TEST DATA - fictional values only. Empty standardized/hash = not hashable (null).
+field,raw_input,standardized,sha256_base64
+first_name,Juan Pablo,juanpablo,91hIbrbzNeqHs3o81O5yNrXUj7wDd2shvZ6THKi9qz8=
+last_name,Martinez,martinez,2wRPGbwBNxhShjRczx8GfS2c4cjvs4NJskeWloUNtp8=
+last_name,O'Connor-López,oconnorlopez,wRhK2NSl7s5y9KV3LUYofirbKMVFXQB04RsLM00gbiI=
+first_name,Björn,bjorn,OQ7mbeDftplbSl1U26xOIGldt0qjCHkZg6kWHUQDvmU=
+first_name,"  ZOË ",zoe,nQF+JoG38xcl4cD74mEuiQecIoBrAs96iUtQDdWiGcE=
+last_name,Strauß,strauss,K90pL8r/YxCbdHAMrwSKj2vvqU3gBEC+d+PsVWAftpA=
+first_name,Renée,renee,oGcKD9O1ya6GuRhvrBVD487vShA+XU77nbOHh8OpwdE=
+first_name,Jean-Luc,jeanluc,f+84Bm25kA+ZL6mSbuqMxkj0TCr1DE1RHEFUIhlsjvU=
+dob,1990-01-12,19900112,Qzs+CDJkSiNw2NDie4BNMNUh2SApKDrYqNUF2vQiYHc=
+dob,01/12/1990,19900112,Qzs+CDJkSiNw2NDie4BNMNUh2SApKDrYqNUF2vQiYHc=
+dob,19900112,19900112,Qzs+CDJkSiNw2NDie4BNMNUh2SApKDrYqNUF2vQiYHc=
+zip,95811-6213,95811,hhrJ0lmzrCGQGqGD36pCucffqrftb5k70CV4OogYNKM=
+zip,78701,78701,OEJIsYBVd31pQDtHnXThCpbsxsbdbwIwhoTT2U6qytE=
+phone,+1 (987) 765-4321,9877654321,Kqb5sWi/zGQOa1P0G8oKcQ4lrzPEwui2TgQ/I6G8h3s=
+phone,987.765.4321,9877654321,Kqb5sWi/zGQOa1P0G8oKcQ4lrzPEwui2TgQ/I6G8h3s=
+phone,19877654321,9877654321,Kqb5sWi/zGQOa1P0G8oKcQ4lrzPEwui2TgQ/I6G8h3s=
+email,"  Sample.Person+TX@Example.COM ",sample.person+tx@example.com,Seurxov/jzT5rYnUlOb1TzU2/Rlraoh2frX6Z3F0sV4=
+first_name,Νίκος,nikos,M1xU87YGGwuLseP9/0x3HDaAyqaNEpnDb9fgj33PZH8=
+last_name,Παπαδόπουλος,papadopoylos,fdXlr859o/uZ2d8DT5+BjHpQVKpdKHBoVDTy0xDwxA0=
+first_name,Γιώργος,giorgos,VBeSLyrrI37HL31GZhBjWl0RD180PsACDnH0sX9NmTE=
+last_name,Θεοδωρίδης,theodoridis,alz5Wb1zMA+E//Y772wmN8y3BbLsguNQIRaegCy8/qw=
+last_name,Ψαράς,psaras,u/SZGhFxgsZZHWPMzyx0pGWHv0OX7DLv9swhyCR/i2g=
+first_name,Дмитрий,dmitriy,ey5Zt2eQwoKSsmmTusVHzRD6V3Yg11+s6iGJqfpVRvc=
+last_name,Щербаков,shcherbakov,nuuqPWr/14clJiqZc3R3AsF7RWr766aj1SiWA3Uj8O0=
+first_name,Юлия,yuliya,FnTPezlTsTvAFzhGFu2U04JYxzcuElVi6QtEniGJtug=
+last_name,Ёлкина,yolkina,76+cWLeQDX12pDMJWw+j6jNgjkh09RHp/1ovYf8WuMU=
+first_name,Олександр,oleksandr,ELZuK9VT1PTto0J9SYioMMYIYKigJffbt+Ycx11/Y6g=
+first_name,Мар'яна,maryana,15KnLt5I9uU863vBGs/IfOcfWP+HYh8GF/eR7UlGYME=
+last_name,Ґонта,gonta,MI+Rp5MBgOdPlAsmHKX3Wq4KkYpLbPIZexaUry1Qmys=
+first_name,Ĳsbrand,ijsbrand,QxEvIi6kCEtI/FX94HzcFh6Y18iI/6s/cnIqB7c9HzM=
+zip,91790-3771,91790,2FPZucR4x7U8KlM+SFAX4LPGhwNz/PIZUCSUdDh0o/s=
+zip,M1B 1A1,m1b1a,n8L9q8mVeT6Xt9/EeUNiTukGDrkbPJ3DvOEx14uElxk=
+zip," 00712345",71234,aeNUYKh7Xw5sqpxSbSP9eOHsj6iXewbUyavv89DIuhQ=
+zip," 00300-9999",300,mDvWFLta/s5as7YCP3EUfNe2vCMU+dJ690IlQcZVg4k=
+zip,07701,7701,aAres2DPsV2yGqkblpFBA9jM/UZKsWtBX0+8NY6vyzk=
+phone,+1(415)555-9317,4155559317,vGM7y5n+hBXRSEAklhHDPCbysyNgYTmXdMcagGUOY8E=
+phone,+84(90)123 4567,4901234567,ptzVkgbv9DonwvPCHmXmJ2SEOaolSh37z3ZzY/Gmm+U=
+phone,+354(123)4567,3541234567,Btrzydf5K6ALAKKXJGFHSx7u5bDzHC9WlVYtpq1n2rY=
+phone,5551273811,5551273811,jr/RAWYVN+ODBf2vRxwBASPwiO4x27OGI1y3IDhcwLo=
+phone,765-4321,7654321,/miiH8druns6PY5FTsqM0ljeaP0I3d8DXyPdvc5vwEk=
+first_name,Testy,testy,KPVVh7HkLPFEwVucPznPXgTiD7h5eFIlr9YuTfqVH0Q=
+last_name,Example,example,UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=
+first_name,SAMPLE,sample,ryvb4aqbbsHireHWlPQfxxqDHQJo6YkVYhE9imKt0b8=
+last_name,Ex-Ample Jr.,examplejr,4yxXjuwCshBfoJp7ClJ7Pcu937rlHXPC1YQP/K2iF04=
+first_name,Ånne-Marie,annemarie,Z0letXFd5Dwm98GLJcx/YqdUAjZRa9WdUWKm90NZgIM=
+last_name,Ñandú,nandu,l244q8U5bmHoO59L92gov87jZbRn15nOBWIkZE5VXqI=
+first_name,Øystein,oystein,y7RPfpbbpHT035h8tvxK58U+pqjBqnwLU9xWlZChuJg=
+last_name,Łukasz,lukasz,1uaqm/N1tDX5/ef2QSoktDyihGVEi6Mz+l7Fdydg4mA=
+first_name,ΣΟΦΙΑ,sofia,hoRuhPm/sgU6SCMZOEPSKgviSnXTBNb4ouTS+sRF76o=
+last_name,ПЕТРОВ,petrov,zxP+LP8oND5mHRraajanvASnNP+lZHyOp2fGMgMukwo=
+first_name,Ђорђе,ђorђe,IMtbYsrFhSaHcGrRQw0qdgXxaID7WD9yJV3Ags5Gee0=
+first_name,李,李,wWZnyng5oBGlSGKDcqwk9WUApoCI6sF+Pn7m7fnFQSU=
+last_name,Ex4mple,ex4mple,qX5/QtrKXmf/aCTtIUN+lFm2vA6W6J8iT0c/z8pREFY=
+first_name,"  - ' ",,
+first_name,,,
+dob,1/2/1985,19850102,xq/6G/TGy71mDYi3aEM84hGl3MwSrUsdQ3CEUTju4+8=
+dob,1985/02/01,19850201,p9Prbpp7fYNAdsMGEzHVy0YbI99mzUcjGpv262D1v8I=
+dob,1985.2.1,19850201,p9Prbpp7fYNAdsMGEzHVy0YbI99mzUcjGpv262D1v8I=
+dob,02-29-2000,20000229,eJWMFVtCCt7/tVGG8f8koM1USh2Vd+EU53k8xF+QrgE=
+dob,02/29/2001,,
+dob,13/01/1990,,
+dob,1990-13-01,,
+dob,0050-01-01,,
+dob,Jan 1 1990,,
+dob," 12/31/1999 ",19991231,+oIMusZ3cfvSD31r+Q67XDtuvDnnzv8kWdNKVTbbKkU=
+zip,00000,,
+zip,-1234,,
+zip,787O1,787o1,0DHb37ThTk/E7C9rLqsuEQLKY/JvEfbK+I7BWIjx02c=
+zip,SW1A 1AA,sw1a1,lJr3gKGeb21LmdcER0M0jbu3qyJF/hRoY1c7I9AsWJA=
+zip,1,1,a4ayc/80/OGda4BO/1o/V0etpOqiLx1JwB5S3beHW0s=
+phone,(000) 000-0000,0000000000,hNnEuElQa22PgHWpAA5+CiVL5xBg6oifrTyIOVmI9Pw=
+phone,none,,
+phone,+44 20 7946 0000,2079460000,W0nmRoAoSLktr9jmjYwaL+/WS2s8nqClorGElYhRs8A=
+phone,555 0100 ext 12,555010012,IsbmmPKJ0qXSk9kNzEiWUHphf8Hsu1V/HcxAcxw6RAw=
+email,TESTY.EXAMPLE@EXAMPLE.COM,testy.example@example.com,YS5VSxlFrkM6Qv4iurP1Jchz1eykJMIwJmTrVD1a34U=
+email,not-an-email,,
+email,two@@example.com,,
+email,a b@example.com,,
+email,"	sample+list@example.invalid
+",sample+list@example.invalid,lE59Bu1JvBUaL2gGIk32aO+xU/bCTchQDyvJZBjpgHE=
+first_name,한국,한국,GCKfyezBCvsWS/Gv8LLqKCATv88QRKBpvimBxruB6kM=
+last_name,ＴＥＳＴＹ,ｔｅｓｔｙ,vMJigPN1rr4PGN06u/SWfmu5YHiycBsnZnOmVJl/5q0=
+last_name,Example😀,example,UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=
+zip,1234𝐀,1234�,OJYjPLpexdX3xtCPkGwkku39WpdEPfoWv7iyIin5pqU=
+zip,𐐀𐐀𐐀,𐐨𐐨�,t6TqsMUttU7Zdh/5QiC8q6R5uzOGNqBQOcpZumVopo4=
+last_name,ΟΔΟΣ,odos,llDswFRqM6BCzI4JMqYZesSES/uUTkSZXzqNmspFpgo=
+email,ΑΣ@example.com,ας@example.com,9qTHHh2g4gBssgLlmQsxyoRz2Exw+3XzQ2+u/ISg18Y=
+email,ΑΣΑ@example.com,ασα@example.com,LP4TTq+2vA2Q+T6lXQeNaqO2VommBWSv+NgkxwnIhW8=
+first_name,İpek,ipek,TmK3h9MBT2NySaLtc4Po1z3P6JwC54t672neV7CLmoA=
+ndz,Testy|Example|01/12/1990|78701-1234,KPVVh7HkLPFEwVucPznPXgTiD7h5eFIlr9YuTfqVH0Q=UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=Qzs+CDJkSiNw2NDie4BNMNUh2SApKDrYqNUF2vQiYHc=OEJIsYBVd31pQDtHnXThCpbsxsbdbwIwhoTT2U6qytE=,HkOYp2z1hmlSBntwMGHYOxSjLSxaUxKoPMnTzvGa2G4=
+ndz,Sample|O'Placeholder|1985-02-01|00501,ryvb4aqbbsHireHWlPQfxxqDHQJo6YkVYhE9imKt0b8=TOLnSp6uR0YPbiEibeteS3iWitiyDDVDVF/JQSgP4tY=p9Prbpp7fYNAdsMGEzHVy0YbI99mzUcjGpv262D1v8I=EVjn4Sxec2Ixjl48Lh8vGrSVeKsdFpHpgYp8P2swtSg=,rQhT2IIwAMaaZtjSbj/AzDZEJg2Bb13B6Rm2nqlnuvI=
+ndz,Νίκος|Παπαδόπουλος|19700704|73301,M1xU87YGGwuLseP9/0x3HDaAyqaNEpnDb9fgj33PZH8=fdXlr859o/uZ2d8DT5+BjHpQVKpdKHBoVDTy0xDwxA0=IqcsgD8mWIdGh397TtPkLRPBpg8NRx5bCRg8n1iBCPM=2e626kHzwiOpJeJz4YStnfRAJ9PN9Tw9+G1d9fQGZgk=,fW/p1Rnu0u4lY7xQY9cqBcv/x4dpzuiTrGf/HRg9jww=
+ndz,Дмитрий|Щербаков|12/31/1999|M1B 1A1,ey5Zt2eQwoKSsmmTusVHzRD6V3Yg11+s6iGJqfpVRvc=nuuqPWr/14clJiqZc3R3AsF7RWr766aj1SiWA3Uj8O0=+oIMusZ3cfvSD31r+Q67XDtuvDnnzv8kWdNKVTbbKkU=n8L9q8mVeT6Xt9/EeUNiTukGDrkbPJ3DvOEx14uElxk=,4LYz5m1/CxqCVMP8roha9mTtPPB2E2xIzR3PvbRolOc=
+ndz,Testy|Example|02/30/1990|78701,,
+ndz,Fakey||1990-01-12|78701,,

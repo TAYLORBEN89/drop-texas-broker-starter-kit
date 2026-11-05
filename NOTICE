@@ -1,0 +1,11 @@
+DROP Texas broker integration starter kit
+Copyright 2026 DROP Texas contributors
+
+This product includes software developed by DROP Texas contributors, licensed under the
+Apache License, Version 2.0 (see LICENSE).
+
+SPEC.md and the test vector data in test-vectors/ are licensed under the Creative Commons
+Attribution 4.0 International License (see LICENSE-SPEC).
+
+The transliteration table reproduces the DROP Transliteration Mapping published by the
+California Privacy Protection Agency in its DROP technical documentation (v1.2.0).

@@ -1,0 +1,10 @@
+{
+  "name": "drop-broker-starter-kit",
+  "version": "0.1.0-draft",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "DRAFT reference implementations and test vectors for matching DROP-style hashed deletion lists.",
+  "scripts": { "test": "./run-tests.sh", "demo": "python3 examples/run_demo.py" },
+  "engines": { "node": ">=18" }
+}

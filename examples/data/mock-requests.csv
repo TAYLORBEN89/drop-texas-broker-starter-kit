@@ -1,0 +1,8 @@
+# SYNTHETIC - fictional opt-out requests the MOCK server turns into hashed lists. Not real people.
+first_name,last_name,dob,zip,phone,email
+Testy,Example,01/12/1990,78701-1234,+1 (512) 555-0100,testy.example@example.com
+Sample,Placeholder,1985-02-01,73301,512.555.0101,sample.placeholder@example.com
+Fakey,McFakerson,12/31/1999,78702,(512) 555-0102,fakey.mcfakerson@example.com
+Demo,Nobody,1970-07-04,75001,512-555-0103,demo.nobody@example.invalid
+Νίκος,Δοκιμή,03/03/1980,77001,512 555 0104,demo.greek@example.invalid
+Тест,Пример,1975-05-05,79901,5125550105,demo.cyrillic@example.invalid
