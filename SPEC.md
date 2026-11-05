@@ -1,6 +1,6 @@
 # DROP Texas broker list matching: normalization and hash specification
 
-> **DRAFT (v0.1).** Subject to change before publication. All examples are synthetic.
+> All examples are synthetic.
 >
 > SPDX-License-Identifier: CC-BY-4.0. This document is licensed under Creative Commons Attribution 4.0 International (see LICENSE-SPEC).
 
@@ -139,7 +139,7 @@ example  -> UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=
 SHA-256/Base64 of the 176-char concatenation -> HkOYp2z1hmlSBntwMGHYOxSjLSxaUxKoPMnTzvGa2G4=
 ```
 
-## 6. List files we send
+## 6. List file format
 
 - UTF-8 CSV, LF line endings, header `Id,Hash`, rows sorted by `Id` in ascending byte order.
 - `Id` is an opaque, random work-item id, unique within the list; it carries no meaning and does not link across lists.

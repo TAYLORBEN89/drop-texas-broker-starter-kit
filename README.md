@@ -1,8 +1,8 @@
 # DROP Texas broker integration starter kit
 
-> **DRAFT. Not yet published. Endpoints, names and details may change.** All data in this repository is synthetic.
+All data in this repository is synthetic. Endpoints and details may change.
 
-DROP Texas sends registered data brokers monthly lists of **hashed** consumer identifiers to delete. This kit gives
+Brokers can download lists of hashed opt-out requests that Texans submitted. This kit gives
 your engineering (or agent) team everything needed to match those lists against your own records and send statuses
 back, without ever receiving raw personal information from us.
 
